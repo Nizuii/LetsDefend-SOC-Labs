@@ -22,3 +22,6 @@ Inorder to check whether the source IP address is malicious or not we have to fi
 
 <img width="1856" height="1018" alt="image" src="https://github.com/user-attachments/assets/15bb9a0c-16f4-40ba-84e9-0b2cb85ec7e9" />
 
+## Step-2 Searching for the successful login
+
+After confirming the IP is malicious our next objective is to sort out the successful login from the failed attempts. the query we used to filter the malicious IP address logs is `source_ip == 218.92.0.56`
