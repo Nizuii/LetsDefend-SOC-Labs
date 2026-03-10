@@ -24,7 +24,35 @@ Inorder to check whether the source IP address is malicious or not we have to fi
 
 ## Step-2 Searching for the successful login
 
-After confirming the IP is malicious our next objective is to sort out the successful login from the failed attempts. the query we used to filter the malicious IP address logs is `source_ip == 218.92.0.56`. After scrolling to these log we was able to detect the only one success ful login attempt.
+After confirming the IP is malicious our next objective is to sort out the successful login from the failed attempts. the query we used to filter the malicious IP address logs is `source_ip == 218.92.0.56`. After scrolling to these log we was able to detect one success ful login attempt.
 
 <img width="1850" height="578" alt="image" src="https://github.com/user-attachments/assets/7cf063fb-738c-4c01-8f81-c0f670c169b1" />
 
+And from the log investigation we observe that logs show many connections to port 3389 and this port is RDP.
+
+```bash
+source_port = 52316
+source_port = 32029
+source_port = 31454
+source_port = 33376
+source_port = 52534
+```
+This pattern strongely indicates automated bruteforce tool.
+
+## Critical Finding
+In the successful login log we opened:
+
+```bash
+EventID: 4624
+Description: An account was successfully logged on
+Logon Type: 10 (RemoteInteractive)
+Username: Matthew
+Source IP: 218.92.0.56
+```
+
+| Field         | Meaning              |
+| ------------- | -------------------- |
+| EventID 4624  | Successful login     |
+| Logon Type 10 | Remote Desktop login |
+| Source IP     | Attacker             |
+| Username      | Compromised account  |
