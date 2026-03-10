@@ -65,3 +65,25 @@ Attack chain:
 1. External IP starts brute force attempts.
 1. Many attempts failed to login.
 1. Eventually successful RDP login.
+
+**Alert Classification**: True Positive because the IP is malicious, multiple brute force attempts, successful RDP login.
+**SOC Analyst Investigation Note**: 
+```bash
+Multiple RDP login attempts were detected from external IP 218.92.0.56 against host 172.16.17.148.
+Threat intelligence indicates the IP has malicious reputation.
+
+Log analysis shows repeated connection attempts to port 3389.
+Event ID 4624 confirms a successful RDP login for user "Matthew" using Logon Type 10.
+
+This indicates the attacker successfully authenticated via RDP after brute force attempts.
+
+The alert is classified as a True Positive.
+```
+
+## Actions and Response:
+
+In a real company the next actions would be:
+1. Disable compromised account
+1. Force password reset
+1. Block attacker IP on firewall
+1. Investigate post-login activity
