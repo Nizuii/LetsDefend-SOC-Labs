@@ -59,3 +59,9 @@ Source IP: 218.92.0.56
 
 This means the attacker successfully logged into the system via RDP.
 
+## Analysis Conclusion
+
+Attack chain:
+1. External IP starts brute force attempts.
+1. Many attempts failed to login.
+1. Eventually successful RDP login.
