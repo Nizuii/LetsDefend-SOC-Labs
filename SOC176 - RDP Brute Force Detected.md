@@ -56,3 +56,6 @@ Source IP: 218.92.0.56
 | Logon Type 10 | Remote Desktop login |
 | Source IP     | Attacker             |
 | Username      | Compromised account  |
+
+This means the attacker successfully logged into the system via RDP.
+
