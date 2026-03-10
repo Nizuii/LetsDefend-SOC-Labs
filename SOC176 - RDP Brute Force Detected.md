@@ -19,5 +19,6 @@ Completed date: 10-03-2026
 ## Step-1 Analyze whether the source IP address is malicious or not.
 
 Inorder to check whether the source IP address is malicious or not we have to first check the IP reputation in the threat intelligence feeds. And the result we got while checking the IP address in threat intelligence feeds indicates that the IP address is malicious.
+
 <img width="1856" height="1018" alt="image" src="https://github.com/user-attachments/assets/15bb9a0c-16f4-40ba-84e9-0b2cb85ec7e9" />
 
