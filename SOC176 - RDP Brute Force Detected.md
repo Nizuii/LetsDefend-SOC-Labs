@@ -1,7 +1,7 @@
 # 	SOC176 - RDP Brute Force Detected
 
-Reported by: Nizamudheen KN
-Completed date: 10-03-2026
+Reported by: Nizamudheen KN  
+Completed date: 10-03-2026  
 
 ---
 
