@@ -14,3 +14,12 @@ Completed date: 10-03-2026
 **Destination Hostname** - WebServer10000  
 **Requested URL** - GET douj=3034%20AND%201%3D1%20UNION%20ALL%20SELECT%201%2CNULL%2C%27%3Cscript%3Ealert%28%22XSS%22%29%3C%2Fscript%3E%27%2Ctable_name%20FROM%20information_schema.tables%20WHERE%202%3E1--%2F%2A%2A%2F%3B%20EXEC%20xp_cmdshell%28%27cat%20..%2F..%2F..%2Fetc%2Fpasswd%27%29%23 HTTP/1.1 200 865  
 **Device Action** - Allowed  
+
+## Analyze the Request URL
+
+The request shown is:
+```bash
+GET /?douj=30%4%20AND%201%3D1%20UNION%20ALL%20SELECT%201%2CNULL%2C%27%3Cscript%3Ealert%2822XSS%22%29%3C/script%3E%2Ctable_name%20FROM%20information_schema.tables%20WHERE%20table_schema%3D%27%3A%2A%2A%3B%20EXEC%20xp_cmdshell%28%27cat%20...%27%29 HTTP/1.1
+```
+
+This is URL-encoded SQL injection.
