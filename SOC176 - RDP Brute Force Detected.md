@@ -12,3 +12,10 @@ Completed date: 10-03-2026
 **Source IP Address** - 218.92.0.56  
 **Destination IP Address** - 172.16.17.148  
 **Destination Hostname** - Mathew  
+**Protocol** - RDP  
+**Firewall action** - Allowed  
+**Alert Trigger Reason** - Login failure from a single source with different non existing accounts.  
+
+## Step-1 Analyze whether the source IP address is malicious or not.
+
+Inorder to check whether the source IP address is malicious or not we have to first check the IP reputation in the threat intelligence feeds.
