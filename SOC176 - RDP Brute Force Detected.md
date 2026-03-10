@@ -24,4 +24,7 @@ Inorder to check whether the source IP address is malicious or not we have to fi
 
 ## Step-2 Searching for the successful login
 
-After confirming the IP is malicious our next objective is to sort out the successful login from the failed attempts. the query we used to filter the malicious IP address logs is `source_ip == 218.92.0.56`
+After confirming the IP is malicious our next objective is to sort out the successful login from the failed attempts. the query we used to filter the malicious IP address logs is `source_ip == 218.92.0.56`. After scrolling to these log we was able to detect the only one success ful login attempt.
+
+<img width="1850" height="578" alt="image" src="https://github.com/user-attachments/assets/7cf063fb-738c-4c01-8f81-c0f670c169b1" />
+
