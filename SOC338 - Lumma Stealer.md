@@ -46,3 +46,5 @@ Virus Total
 Talos Intelligence
 <img width="1849" height="901" alt="image" src="https://github.com/user-attachments/assets/958eccc6-7562-4cbf-b26f-06a8c5bea395" />
 
+Letsdefend TI
+<img width="1868" height="945" alt="image" src="https://github.com/user-attachments/assets/00aaa552-fd0d-4172-9dcf-7055d46113df" />
