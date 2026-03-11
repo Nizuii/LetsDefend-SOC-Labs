@@ -76,3 +76,17 @@ http://windows-update.site
 | Malware detections         | Confirmed threat |
 | Lumma campaign correlation | High confidence  |
 
+Now we correlate everything:
+**Email evidence:**
+- Fake Microsoft Sender
+- Phishing upgrade lure
+- Suspicious domain
+- Malicious URL
+
+**Threat Intelligence:**
+- IP tagged Lumma
+- URL detected malicious
+- Detection rule triggered.
+
+**Behavioral detection:**
+- ClickFix malware script detected.
