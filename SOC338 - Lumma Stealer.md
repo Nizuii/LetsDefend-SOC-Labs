@@ -69,3 +69,10 @@ VirusTotal shows 9/95 vendors detected malicious. the URL is:
 http://windows-update.site
 ```
 
+| Indicator                  | Reason           |
+| -------------------------- | ---------------- |
+| HTTP not HTTPS             | No security      |
+| Fake Microsoft domain      | Impersonation    |
+| Malware detections         | Confirmed threat |
+| Lumma campaign correlation | High confidence  |
+
