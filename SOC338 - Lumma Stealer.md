@@ -48,3 +48,15 @@ Talos Intelligence
 
 Letsdefend TI
 <img width="1868" height="945" alt="image" src="https://github.com/user-attachments/assets/00aaa552-fd0d-4172-9dcf-7055d46113df" />
+
+| Evidence       | Result                  |
+| -------------- | ----------------------- |
+| Detection rule | Lumma Stealer campaign  |
+| Email lure     | Phishing                |
+| Sender domain  | Fake Microsoft          |
+| VirusTotal     | Some detections         |
+| Talos          | Neutral (new infra)     |
+| LetsDefend TI  | Lumma tag               |
+| Trigger reason | ClickFix malware script |
+
+### 3. URL Analysis Conclusion.
