@@ -15,3 +15,34 @@ Completed date: 10-03-2026
 **Email Subject**: Upgrade your system to Windows 11 Pro for FREE  
 **Device Action**: Allowed  
 **Triggered Reason**: Redirected site contains a click fix type script for Lumma Stealer distribution.  
+
+This is a phishing email delivery Lumma Stealer malware using DDL sideloading.
+
+## Immediate Red Flags
+
+### 1. Sender email
+
+```bash
+update@windows-update.site
+```
+
+Its a red flag because microsoft does not send updates from random domains. Legitimate domains would look like:
+
+```bash
+microsoft.com
+windows.com
+office.com
+```
+
+This is spoofing microsoft branding.
+
+### 2. SMTP IP Investigation.
+
+IP: `132.232.40.201`. We have checked the IP reputation in Threat Intelligence Feeds.
+
+Virus Total
+<img width="1850" height="890" alt="image" src="https://github.com/user-attachments/assets/a4bcd965-102d-4108-989d-38c6adcc6ab6" />
+
+Talos Intelligence
+<img width="1849" height="901" alt="image" src="https://github.com/user-attachments/assets/958eccc6-7562-4cbf-b26f-06a8c5bea395" />
+
