@@ -60,3 +60,12 @@ Letsdefend TI
 | Trigger reason | ClickFix malware script |
 
 ### 3. URL Analysis Conclusion.
+
+VirusTotal
+<img width="1849" height="888" alt="image" src="https://github.com/user-attachments/assets/a216cea0-fee9-4ff0-83ff-8a736575ca3d" />
+
+VirusTotal shows 9/95 vendors detected malicious. the URL is:
+```bash
+http://windows-update.site
+```
+
