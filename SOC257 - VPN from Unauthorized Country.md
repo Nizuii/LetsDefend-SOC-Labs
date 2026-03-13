@@ -100,3 +100,31 @@ Ipinfo:
 
 **Verdict**: True Positive and unauthorized access. 
 
+## Step 5: Respond
+
+<table>
+  <tr>
+    <td><strong>Action</strong></td>
+    <td><strong>Why</strong></td>
+  </tr>
+  <tr>
+    <td>Disable Monica's account immediately</td>
+    <td>Prevent further access</td>
+  </tr>
+  <tr>
+    <td>Force password reset</td>
+    <td>Account may be compromised</td>
+  </tr>
+  <tr>
+    <td>Check if any data was accessed/exfiltrated</td>
+    <td>Assess damage</td>
+  </tr>
+  <tr>
+    <td>Escalate to Tier 2 / IR team</td>
+    <td>Serious incident</td>
+  </tr>
+  <tr>
+    <td>Document everything</td>
+    <td>For the incident report</td>
+  </tr>
+</table>
