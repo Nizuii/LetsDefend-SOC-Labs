@@ -60,6 +60,8 @@ Abuseip:
 Ipinfo:
 <img src="/Images/ipinfo.png">
 
+## Step 3: Analyze what does the evidence say
+
 <table>
   <tr>
     <td><strong>Source</strong></td>
@@ -87,3 +89,14 @@ Ipinfo:
     <td>Note</td>
   </tr>
 </table>
+
+## Step 4: Decide - Verdict Summary
+
+- IP from Vietnam (Unauthorized country)
+- IP flagged malicious on virustotal (8/94)
+- 4,656 abuse reports - SSH bruteforce history.
+- 02:04 AM login - Outside business hours.
+- No prior indication Monica works from Vietnam.
+
+**Verdict**: True Positive and unauthorized access. 
+
