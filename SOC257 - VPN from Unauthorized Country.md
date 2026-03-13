@@ -42,3 +42,8 @@ Completed date: 13-03-2026
     <td>The VPN portal used</td>
   </tr>
 </table>
+
+Here the indicated 2 classic red flags that we found are:
+1. **Geo-anomaly** - VPN login from an unauthorized/unexpected country
+1. **Time anomaly** - 2:04 AM is outside normal business hours
+
