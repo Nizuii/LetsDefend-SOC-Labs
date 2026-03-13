@@ -45,3 +45,9 @@
     <td>Mar 14, 2024, 05:23 PM</td>
   </tr>
 </table>
+
+## Step 1: Checking File Hash Reputation.
+
+Virustotal:
+<img src="Images/hashreputation1.png">
+<img src="Images/hashreputation2.png">
