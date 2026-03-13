@@ -1,5 +1,10 @@
 # SOC153 - Suspicious Powershell Script Executed
 
+**Reported by:** Nizamudheen KN  
+**Completed date:** 13-03-2026  
+
+---
+
 ## Step 1: Understand
 
 <table>
