@@ -132,3 +132,5 @@ Ipinfo:
 ## Additional Findings
 
 <img src="/Images/monicaemail.png">
+
+3 OTP emails in 3 minutes from the same malicious IP. Attacker was performing MFA fatigue by spamming MFA notifications to tire the user into approving. 
