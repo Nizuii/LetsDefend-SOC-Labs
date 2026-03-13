@@ -26,4 +26,19 @@ Completed date: 13-03-2026
     <td>33.33.33.33 (Monica)</td>
     <td>The internal machine being accessed</td>
   </tr>
+  <tr>
+    <td><strong>User</strong></td>
+    <td>monica@letsdefend.io</td>
+    <td>Whose account was used</td>
+  </tr>
+  <tr>
+    <td><strong>Time</strong></td>
+    <td>Feb 13, 2024, 02:04 AM</td>
+    <td>2AM login — suspicious timing!</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>https://vpn-letsdefend.io</td>
+    <td>The VPN portal used</td>
+  </tr>
 </table>
