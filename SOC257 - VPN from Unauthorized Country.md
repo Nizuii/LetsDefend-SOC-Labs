@@ -47,3 +47,9 @@ Here the indicated 2 classic red flags that we found are:
 1. **Geo-anomaly** - VPN login from an unauthorized/unexpected country
 1. **Time anomaly** - 2:04 AM is outside normal business hours
 
+## Step 2: Enrich - Source IP investigation.
+
+This is the result we found about 113.161.158.12
+
+Virustotal:
+
