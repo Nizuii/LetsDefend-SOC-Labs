@@ -100,37 +100,45 @@ Ipinfo:
 
 **Verdict**: True Positive and unauthorized access. 
 
-## Step 5: Respond
-
-<table>
-  <tr>
-    <td><strong>Action</strong></td>
-    <td><strong>Why</strong></td>
-  </tr>
-  <tr>
-    <td>Disable Monica's account immediately</td>
-    <td>Prevent further access</td>
-  </tr>
-  <tr>
-    <td>Force password reset</td>
-    <td>Account may be compromised</td>
-  </tr>
-  <tr>
-    <td>Check if any data was accessed/exfiltrated</td>
-    <td>Assess damage</td>
-  </tr>
-  <tr>
-    <td>Escalate to Tier 2 / IR team</td>
-    <td>Serious incident</td>
-  </tr>
-  <tr>
-    <td>Document everything</td>
-    <td>For the incident report</td>
-  </tr>
-</table>
-
 ## Additional Findings
 
 <img src="/Images/monicaemail.png">
 
 3 OTP emails in 3 minutes from the same malicious IP. Attacker was performing MFA fatigue by spamming MFA notifications to tire the user into approving. 
+
+## Step 5: Respond
+
+<table>
+  <tr>
+    <td><strong>Priority</strong></td>
+    <td><strong>Action</strong></td>
+  </tr>
+  <tr>
+    <td>Immediate</td>
+    <td>Disable Monica's account</td>
+  </tr>
+  <tr>
+    <td>Immediate</td>
+    <td>Invalidate ALL active sessions</td>
+  </tr>
+  <tr>
+    <td>Immediate</td>
+    <td>Force password reset</td>
+  </tr>
+  <tr>
+    <td>Urgent</td>
+    <td>Find out HOW attacker got her password</td>
+  </tr>
+  <tr>
+    <td>Urgent</td>
+    <td>Check if any OTP was actually approved</td>
+  </tr>
+  <tr>
+    <td>Important</td>
+    <td>Notify Monica directly via phone (not email — attacker may have email access)</td>
+  </tr>
+  <tr>
+    <td>Important</td>
+    <td>Check for other accounts under MFA Fatigue attack</td>
+  </tr>
+</table>
