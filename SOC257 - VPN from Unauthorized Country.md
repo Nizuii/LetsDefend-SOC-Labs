@@ -56,3 +56,6 @@ Virustotal:
 
 Abuseip:
 <img src="/Images/abuseip.png">
+
+Ipinfo:
+<img src="/Images/ipinfo.png">
