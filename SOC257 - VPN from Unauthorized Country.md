@@ -128,3 +128,7 @@ Ipinfo:
     <td>For the incident report</td>
   </tr>
 </table>
+
+## Additional Findings
+
+<img src="/Images/monicasemail.png">
