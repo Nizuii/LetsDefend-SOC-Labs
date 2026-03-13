@@ -46,4 +46,8 @@
   </tr>
 </table>
 
+Here what we are investigating is that a system of user named Tony's computer detected suspuicious power shell script getting executed. The file name is `payload_1.ps1`. But here the term payload is a term of the program used by attackers inorder to exploit a vulnerability. So the file name itself is very suspicious and along with that the file path of `payload_1.ps1` is `C:\Users\LetsDefend\Downloads\payload_1.ps1`. The only way the file gets in Downloads directory is by the user downloading it either intentionally or unintentionally by phishing links or getting downloaded from any malicious sites.
+
+- Intentionally means it can be an insider threat (employee doing bad things).
+- Unintentionally means victim like employee got tricked.
 
