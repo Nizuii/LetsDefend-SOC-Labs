@@ -51,3 +51,31 @@
 Virustotal:
 <img src="Images/hashreputation1.png">
 <img src="Images/hashreputation2.png">
+
+36/62 vendors is confirmed malicious. It indicates that:
+<table>
+  <tr>
+    <td><strong>Label</strong></td>
+    <td><strong>What it means</strong></td>
+  </tr>
+  <tr>
+    <td><strong>trojan.powershell/boxter</strong></td>
+    <td>PowerShell Trojan — malicious script</td>
+  </tr>
+  <tr>
+    <td><strong>Trojan/PowerShell.Downloader</strong></td>
+    <td>It downloads more malware onto the system</td>
+  </tr>
+  <tr>
+    <td><strong>PowerShell/Injector.FH Trojan</strong></td>
+    <td>It injects code into other processes</td>
+  </tr>
+  <tr>
+    <td><strong>AMSI Bypass (Huorong)</strong></td>
+    <td>It tries to bypass Windows antivirus!</td>
+  </tr>
+  <tr>
+    <td><strong>Downloader category</strong></td>
+    <td>Stage 1 malware — pulls more payloads</td>
+  </tr>
+</table>
