@@ -52,4 +52,3 @@ Here the indicated 2 classic red flags that we found are:
 This is the result we found about 113.161.158.12
 
 Virustotal:
-
