@@ -5,78 +5,24 @@
 
 ---
 
-## Step 1: Understand
+## Executive Summary
 
-<table>
-  <tr>
-    <td><strong>Field</strong></td>
-    <td><strong>Value</strong></td>
-  </tr>
-  <tr>
-    <td><strong>Rule</strong></td>
-    <td>SOC153 - Suspicious Powershell Script Executed</td>
-  </tr>
-  <tr>
-    <td><strong>Hostname</strong></td>
-    <td>Tony</td>
-  </tr>
-  <tr>
-    <td><strong>IP Address</strong></td>
-    <td>172.16.17.206</td>
-  </tr>
-  <tr>
-    <td><strong>File Name</strong></td>
-    <td>payload_1.ps1</td>
-  </tr>
-  <tr>
-    <td><strong>File Path</strong></td>
-    <td>C:\Users\LetsDefend\Downloads\payload_1.ps1</td>
-  </tr>
-  <tr>
-    <td><strong>File Hash</strong></td>
-    <td>db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4eleaf342ac7a2479d0</td>
-  </tr>
-  <tr>
-    <td><strong>AV/EDR Action</strong></td>
-    <td>Detected</td>
-  </tr>
-  <tr>
-    <td><strong>Time</strong></td>
-    <td>Mar 14, 2024, 05:23 PM</td>
-  </tr>
-</table>
+On March 14, 2024 at 05:23 PM, a suspicious PowerShell 
+script (payload_1.ps1) was detected executing on the 
+endpoint hostname Tony (172.16.17.206). 
 
-Here what we are investigating is that a system of user named Tony's computer detected suspuicious power shell script getting executed. The file name is `payload_1.ps1`. But here the term payload is a term of the program used by attackers inorder to exploit a vulnerability. So the file name itself is very suspicious and along with that the file path of `payload_1.ps1` is `C:\Users\LetsDefend\Downloads\payload_1.ps1`. The only way the file gets in Downloads directory is by the user downloading it either intentionally or unintentionally by phishing links or getting downloaded from any malicious sites.
+The malware was delivered via a phishing link, which 
+caused the user to unknowingly download the malicious 
+script from the internet through Chrome browser. Upon 
+execution, the script successfully established 
+communication with attacker-controlled Command and 
+Control (C2) infrastructure and attempted to deploy 
+a second stage payload using fileless execution techniques.
 
-- Intentionally means it can be an insider threat (employee doing bad things).
-- Unintentionally means victim like employee got tricked.
+The Antivirus detected the threat but failed to block 
+it, leaving the machine actively compromised.
 
-The AV/EDR detected the but its just detefction not blocked that means its still infected. This is critical the threat is potentially still running on Tony's machine.
-
-## Check File Hash Reputation.
-
-**Hash**: db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4eleaf342ac7a2479d0
-
-Here are the results of the hash reputatuion from virus total:
-
-<img src="Images/hash1.png">
-<img src="Images/hash2.png">
-<img src="Images/hash3.png">
-<img src="Images/hash4.png">
-<img src="Images/hash5.png">
-<img src="Images/hash6.png">
-
-33 out of 62 AV engines is malicious and the final verdict is confirmed malicious.
-In the image 5 we found one interesting stuff.
-```bash
-Contacted URL:
-https://kionagranada.com/upload/beauty.exe
-                                  ↑
-                            beauty.exe !!
-```
-
-This malicious powershell script is trying to download another file called beauty.exe from internet onto Tony's computer.
-payload_1.ps1 is the door opener and beauty.exe is the real weapon comming through the door. So our next objective is to find out the connections going out from Tony's computer around 5:23 PM on March 14.
-
-## Checking Outgoing Requests.
-There are 3 outgoing request going from T
+Verdict   : True Positive
+Attack    : PowerShell Trojan Downloader
+Severity  : Critical
+Status    : NOT Contained
