@@ -199,6 +199,11 @@ Caught before infection! 🛡️
 | **Categories** | Phishing and fraud, Malicious websites |
 | **Body SHA-256** | b848e968d3f82b7407f931d9a6283cfc38e0829cfe05d2db51814ed6c967f790 |
 
+### Serving Infrastructure
+| IP | Owner | VT Score | Notes |
+|---|---|---|---|
+| **104.21.11.167** | Cloudflare Inc. 🇺🇸 | 0/94 | Trusted infrastructure abused — 9 malicious files served from this IP |
+
 > **Analyst Notes:**
 > - The malicious URL uses a redirect technique — 
 >   it first goes through cyberlearn.academy 
