@@ -42,3 +42,64 @@ Status    : NOT Contained
 | **AV/EDR Action** | Detected (NOT Blocked) |
 | **Alert Type** | Malware |
 | **Severity** | Medium (Escalated to Critical) |
+
+## 3. Analysis
+
+### 3.1 File Hash Analysis (VirusTotal)
+
+| Field | Value |
+|---|---|
+| **Hash** | db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 |
+| **Detection Score** | 33/62 vendors flagged as malicious |
+| **Popular Threat Label** | trojan.powershell/boxter |
+| **Threat Categories** | Trojan, Downloader |
+| **Family Labels** | powershell, boxter, azorult |
+| **File Size** | 7.14 KB |
+| **Known Names** | agent3.ps1, payload_1.ps1 |
+| **Community Score** | -1 |
+
+#### Behaviour Tags
+| Tag | Meaning |
+|---|---|
+| `powershell` | Abuses PowerShell engine |
+| `detect-debug-environment` | Checks if running in sandbox to evade analysis |
+| `exe-pattern` | Contains executable code patterns |
+| `url-pattern` | Has hardcoded malicious URLs |
+| `long-sleeps` | Sleeps randomly to evade behavioral detection |
+| `checks-network-adapters` | Fingerprints the victim machine |
+
+#### Notable Vendor Detections
+| Vendor | Detection |
+|---|---|
+| AhnLab-V3 | Trojan/PowerShell.Downloader.SC205541 |
+| DrWeb | PowerShell.Loader.3 |
+| ESET-NOD32 | PowerShell/Injector.FH Trojan |
+| Huorong | HEUR:Trojan/PS.AmsiBypass.a |
+| Microsoft | Trojan:PowerShell/Azorult.RPAIMTB |
+| Cynet | Malicious (score: 99) |
+
+#### Contacted Infrastructure (Relations Tab)
+| Type | Value | Detections | Note |
+|---|---|---|---|
+| URL | https://kionagranada.com/upload/beauty.exe | 9/98 | Stage 2 payload |
+| Domain | kionagranada.com | 1/94 | Attacker delivery server |
+| IP | 161.22.46.148 | 0/94 | C2 server — Spain |
+| IP | 192.229.221.95 | 0/94 | Contacted IP |
+
+> **Note:** 11 files dropped and 10+ additional files 
+> identified — confirming multi-stage payload delivery.
+```
+
+---
+
+## 🎯 Now Let's Move To 3.2 — Log Analysis!
+
+You have 3 connections to document. From memory, tell me the details of:
+
+**Connection 1** — Chrome download
+```
+Time → ?
+Destination IP → ?
+Port → ?
+Process → ?
+What happened → ?
