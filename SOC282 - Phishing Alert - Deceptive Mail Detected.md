@@ -139,3 +139,32 @@ Status    : Contained — No click detected
 > and reached Felix's inbox — however the SOC 
 > detected and responded before Felix 
 > clicked the malicious link.
+
+## 4. Attack Timeline
+
+| Time | Event |
+|---|---|
+| **09:20 AM** | Attacker sends phishing email from 103.80.134.63 via SMTP port 25 — email delivered to Felix's mail server (172.16.20.3) |
+| **09:22 AM** | Phishing email reaches Felix@letsdefend.io inbox — Device Action: Allowed |
+| **09:22 AM** | SOC alert fires — SOC282 Phishing Alert Deceptive Mail Detected |
+| **After alert** | Log analysis confirms Felix did NOT click the malicious link — no outbound connections to coffeeshooop.com detected |
+| **After alert** | SOC responds — email to be deleted, domain blocked before any damage occurs |
+```
+ATTACK CHAIN SUMMARY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Attacker registers coffeeshooop.com
+(typosquatting)
+        ↓
+Sends phishing email to Felix
+(free coffee voucher + urgency tactics)
+        ↓
+Email bypasses security — Allowed ⚠️
+        ↓
+SOC detects and alerts 🚨
+        ↓
+Felix did NOT click ✅
+        ↓
+Caught before infection! 🛡️
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
