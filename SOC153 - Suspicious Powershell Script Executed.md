@@ -78,3 +78,5 @@ https://kionagranada.com/upload/beauty.exe
 This malicious powershell script is trying to download another file called beauty.exe from internet onto Tony's computer.
 payload_1.ps1 is the door opener and beauty.exe is the real weapon comming through the door. So our next objective is to find out the connections going out from Tony's computer around 5:23 PM on March 14.
 
+## Checking Outgoing Requests.
+There are 3 outgoing request going from T
