@@ -208,3 +208,29 @@ Caught before infection! 🛡️
 | **Masquerading** | T1036 | free-coffee.zip named to look like legitimate voucher file |
 | **Living off Trusted Infrastructure** | T1583.001 | Malware hosted on AWS S3 to appear as legitimate traffic and evade detection |
 | **Ingress Tool Transfer** | T1105 | Malicious zip file staged for download via redirect URL |
+
+## 7. Verdict
+
+| Field | Value |
+|---|---|
+| **Classification** | ✅ True Positive |
+| **Attack Type** | Phishing — Social Engineering |
+| **Severity** | 🟡 Medium |
+| **Containment Status** | ✅ Contained — Felix did not click |
+| **Impact** | Phishing email successfully delivered to Felix's inbox — however no malicious link was clicked and no malware was downloaded |
+
+### Verdict Justification
+The alert is classified as True Positive based on:
+
+- Sender domain coffeeshooop.com confirmed 
+  typosquatted — extra "o" deliberately added
+- SMTP IP 103.80.134.63 flagged malicious 
+  — 8/94 VirusTotal detections
+- Email contained malicious redirect URL 
+  leading to free-coffee.zip malware
+- Social engineering techniques confirmed 
+  — free offer + urgency tactics used
+- Felix did NOT click the link ✅
+- No outbound connections to 
+  coffeeshooop.com detected in logs ✅
+- Threat contained before any damage ✅
