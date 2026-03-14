@@ -229,3 +229,17 @@ Status    : NOT Contained
 > that reputation alone is insufficient for threat 
 > detection — context, behavior and correlation 
 > are essential for accurate analysis.
+
+## 6. MITRE ATT&CK Mapping
+
+| Technique | ID | Description |
+|---|---|---|
+| **Phishing** | T1566 | Tony was tricked via phishing link into downloading payload_1.ps1 |
+| **PowerShell** | T1059.001 | Malware used PowerShell engine to execute malicious script |
+| **Fileless Execution** | T1059.001 | IEX/IWR used to download and run sd2.ps1 directly in memory — never saved to disk |
+| **Execution Policy Bypass** | T1059.001 | Malware bypassed PowerShell ExecutionPolicy before executing |
+| **Sandbox Evasion** | T1497 | Malware checked for debug/sandbox environment before running |
+| **Masquerading** | T1036 | beauty.exe disguised with innocent name to avoid suspicion |
+| **Command and Control** | T1071 | Malware communicated with 3 attacker C2 servers after execution |
+| **Ingress Tool Transfer** | T1105 | Malware downloaded additional payloads from kionagranada.com |
+| **AMSI Bypass** | T1562.001 | Malware attempted to bypass Windows Antimalware Scan Interface |
