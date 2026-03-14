@@ -22,10 +22,10 @@ a second stage payload using fileless execution techniques.
 The Antivirus detected the threat but failed to block 
 it, leaving the machine actively compromised.
 
-Verdict   : True Positive
-Attack    : PowerShell Trojan Downloader
-Severity  : Critical
-Status    : NOT Contained
+Verdict   : True Positive  
+Attack    : PowerShell Trojan Downloader  
+Severity  : Critical  
+Status    : NOT Contained  
 
 ## 2. Alert Details
 
