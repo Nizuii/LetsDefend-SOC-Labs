@@ -65,3 +65,5 @@ Here are the results of the hash reputatuion from virus total:
 <img src="Images/hash4.png">
 <img src="Images/hash5.png">
 <img src="Images/hash6.png">
+
+33 out of 62 AV engines is malicious and the final verdict is confirmed malicious.
