@@ -88,4 +88,3 @@ Status    : NOT Contained
 
 > **Note:** 11 files dropped and 10+ additional files 
 > identified — confirming multi-stage payload delivery.
-```
