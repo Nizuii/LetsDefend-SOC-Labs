@@ -185,3 +185,47 @@ Status    : NOT Contained
 > — confirming the malware actively reached out to 
 > the attacker's delivery server to download the 
 > Stage 2 payload sd2.ps1.
+
+## 4. Attack Timeline
+
+| Time | Event |
+|---|---|
+| **05:22 PM** | Tony clicks phishing link and downloads payload_1.ps1 via Chrome browser from AWS S3 (3.5.130.147:443) |
+| **05:23 PM** | Malware bypasses PowerShell ExecutionPolicy security restriction and executes payload_1.ps1 (PID: 4315) |
+| **05:23 PM** | PowerShell performs DNS lookup — kionagranada.com resolves to 161.22.46.148 |
+| **05:23 PM** | Malware successfully checks in with C2 server 91.236.116.163:80 — Status 200, victim registered with unique ID |
+| **05:23 PM** | PowerShell connects to 161.22.46.148:443 — Stage 2 C2 communication established successfully |
+| **05:23 PM** | Malware downloads and executes sd2.ps1 from kionagranada.com directly in memory using fileless IEX/IWR technique |
+| **05:23 PM** | Antivirus detects payload_1.ps1 but fails to block or quarantine — machine remains actively compromised |
+
+## 5. Indicators of Compromise (IOCs)
+
+### Malicious Files
+| Filename | Type | Description |
+|---|---|---|
+| **payload_1.ps1** | PowerShell Script | Main malware — Trojan Downloader. Downloaded by Tony via Chrome from AWS S3 |
+| **sd2.ps1** | PowerShell Script | Stage 2 payload — downloaded and executed in memory via fileless IEX/IWR technique |
+| **beauty.exe** | Executable | Additional Stage 2 payload hosted on attacker delivery server kionagranada.com |
+
+### Malicious IP Addresses
+| IP Address | Owner | Country | Role |
+|---|---|---|---|
+| **3.5.130.147** | Amazon AWS | 🇺🇸 USA | Hosted payload_1.ps1 for download — trusted infrastructure abused |
+| **91.236.116.163** | w1n ltd | 🇸🇪 Sweden | C2 check-in server — victim registration, Status 200 confirmed |
+| **161.22.46.148** | Cloudi Nextgen Sl | 🇪🇸 Spain | Stage 2 C2 server — powershell.exe connected directly |
+
+### Malicious Domains
+| Domain | Role | Resolved IP |
+|---|---|---|
+| **kionagranada.com** | Attacker delivery server — hosted sd2.ps1 and beauty.exe | 161.22.46.148 |
+
+### Malicious Hashes
+| Hash | File | Detections |
+|---|---|---|
+| db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 | payload_1.ps1 | 33/62 VirusTotal vendors |
+
+> **Important Note:** All three C2 IP addresses 
+> show clean scores on VirusTotal. This demonstrates 
+> that reputation alone is insufficient for threat 
+> detection — context, behavior and correlation 
+> are essential for accurate analysis.
