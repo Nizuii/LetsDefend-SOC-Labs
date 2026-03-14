@@ -51,3 +51,17 @@ Here what we are investigating is that a system of user named Tony's computer de
 - Intentionally means it can be an insider threat (employee doing bad things).
 - Unintentionally means victim like employee got tricked.
 
+The AV/EDR detected the but its just detefction not blocked that means its still infected. This is critical the threat is potentially still running on Tony's machine.
+
+## Check File Hash Reputation.
+
+**Hash**: db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4eleaf342ac7a2479d0
+
+Here are the results of the hash reputatuion from virus total:
+
+<img src="Images/hash1.png">
+<img src="Images/hash2.png">
+<img src="Images/hash3.png">
+<img src="Images/hash4.png">
+<img src="Images/hash5.png">
+<img src="Images/hash6.png">
