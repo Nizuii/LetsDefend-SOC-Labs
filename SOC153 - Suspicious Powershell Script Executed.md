@@ -169,3 +169,19 @@ Status    : NOT Contained
 > This is a Fileless Malware technique designed to 
 > evade antivirus tools that scan files on disk.
 
+#### Log 3 — DNS Query (EventID 22)
+| Field | Value |
+|---|---|
+| **EventID** | 22 (DNS Query) |
+| **Source** | Sysmon |
+| **Username** | Tony |
+| **Query Name** | kionagranada.com |
+| **Query Result** | 161.22.46.148 |
+| **Process** | C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe |
+| **Time** | Mar 14, 2024, 05:23 PM |
+
+> PowerShell performed a DNS lookup for 
+> kionagranada.com and resolved it to 161.22.46.148 
+> — confirming the malware actively reached out to 
+> the attacker's delivery server to download the 
+> Stage 2 payload sd2.ps1.
