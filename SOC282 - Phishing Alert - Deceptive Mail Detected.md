@@ -188,6 +188,17 @@ Caught before infection! 🛡️
 | **Domain** | coffeeshooop.com | Typosquatted attacker domain |
 | **Malicious URL** | https://download.cyberlearn.academy/download/download?url=https://files-ld.s3.us-east-2.amazonaws.com/59cbd215-76ea-434d-93ca-4d6aec3bac98-free-coffee.zip | Malware delivery URL hidden behind "Redeem Now" button |
 
+### Additional URL Analysis (VirusTotal)
+| Field | Value |
+|---|---|
+| **URL** | https://download.cyberlearn.academy/download/download?url=https://files-ld.s3.us-east-2.amazonaws.com/59cbd215-76ea-434d-93ca-4d6aec3bac98-free-coffee.zip |
+| **VT Score** | 12/95 vendors flagged malicious |
+| **Status** | 200 — URL actively serving malware |
+| **Serving IP** | 104.21.11.167 |
+| **Server** | Cloudflare — trusted infrastructure abused |
+| **Categories** | Phishing and fraud, Malicious websites |
+| **Body SHA-256** | b848e968d3f82b7407f931d9a6283cfc38e0829cfe05d2db51814ed6c967f790 |
+
 > **Analyst Notes:**
 > - The malicious URL uses a redirect technique — 
 >   it first goes through cyberlearn.academy 
