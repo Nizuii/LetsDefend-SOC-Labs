@@ -88,3 +88,50 @@ Status    : NOT Contained
 
 > **Note:** 11 files dropped and 10+ additional files 
 > identified — confirming multi-stage payload delivery.
+
+### 3.2 Log Analysis
+
+#### Connection 1 — Malware Download
+| Field | Value |
+|---|---|
+| **Time** | Mar 14, 2024, 05:22 PM |
+| **Source** | 172.16.17.206 (Tony) |
+| **Destination IP** | 3.5.130.147 |
+| **Destination Port** | 443 (HTTPS) |
+| **Process** | chrome.exe |
+| **URL** | https://files-ld.s3.us-east-2.amazonaws.com/payload_1.ps1 |
+| **Action** | Allowed |
+
+> Tony downloaded payload_1.ps1 via Chrome 
+> browser from an AWS S3 link — most likely 
+> delivered via a phishing email or malicious link.
+
+#### Connection 2 — C2 Check-in
+| Field | Value |
+|---|---|
+| **Time** | Mar 14, 2024, 05:23 PM |
+| **Source** | 172.16.17.206 (Tony) |
+| **Destination IP** | 91.236.116.163 |
+| **Destination Port** | 80 (HTTP) |
+| **Process** | powershell.exe |
+| **URL** | HTTP://91.236.116.163/INDEX.PHP?ID=90059C37&SUBID=9G6CLLE6 |
+| **Status** | 200 (SUCCESS) |
+
+> Malware successfully registered Tony's infected 
+> machine with the attacker's C2 server using a 
+> unique victim ID. Status 200 confirms the 
+> attacker's server responded.
+
+#### Connection 3 — Stage 2 C2
+| Field | Value |
+|---|---|
+| **Time** | Mar 14, 2024, 05:23 PM |
+| **Source** | 172.16.17.206 (Tony) |
+| **Destination IP** | 161.22.46.148 |
+| **Destination Port** | 443 (HTTPS) |
+| **Process** | powershell.exe |
+| **Status** | SUCCESS |
+
+> PowerShell directly connected to attacker 
+> infrastructure — direct proof of active 
+> malware execution communicating with C2 server.
