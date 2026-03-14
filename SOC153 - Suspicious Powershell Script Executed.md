@@ -135,3 +135,22 @@ Status    : NOT Contained
 > PowerShell directly connected to attacker 
 > infrastructure — direct proof of active 
 > malware execution communicating with C2 server.
+
+### 3.3 Execution Evidence
+
+#### Log 1 — Process Creation (EventID 1)
+| Field | Value |
+|---|---|
+| **EventID** | 1 (Process Create) |
+| **Username** | LetsDefend |
+| **Image** | C:\Windows\System32\WINDOWSPOWERSHELL\V1.0\powershell.exe |
+| **CommandLine** | powershell.exe -Command "if((Get-ExecutionPolicy) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1'" |
+| **Original Filename** | payload_1.ps1 |
+| **Directory** | C:\Users\LetsDefend\Downloads\ |
+| **Hash** | db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 |
+| **PID** | 4315 |
+
+> This log captures the exact moment payload_1.ps1 
+> was executed. The malware first checked and bypassed 
+> the PowerShell ExecutionPolicy security restriction 
+> before running — a deliberate evasion technique.
