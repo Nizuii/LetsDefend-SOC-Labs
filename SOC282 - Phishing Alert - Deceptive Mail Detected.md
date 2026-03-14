@@ -196,3 +196,15 @@ Caught before infection! 🛡️
 >   masquerading as a legitimate voucher file
 > - This is the same AWS S3 abuse technique 
 >   we saw in SOC153!
+
+## 6. MITRE ATT&CK Mapping
+
+| Technique | ID | Description |
+|---|---|---|
+| **Phishing** | T1566 | Attacker sent fake coffee voucher email to trick Felix into clicking malicious link |
+| **Typosquatting** | T1583.001 | Registered coffeeshooop.com with extra "o" to impersonate legitimate domain |
+| **Social Engineering** | T1656 | Used free coffee offer combined with urgency tactics to manipulate Felix |
+| **Urgency Tactics** | T1656 | "Hurry, this offer expires soon!" — pressuring victim to act without thinking |
+| **Masquerading** | T1036 | free-coffee.zip named to look like legitimate voucher file |
+| **Living off Trusted Infrastructure** | T1583.001 | Malware hosted on AWS S3 to appear as legitimate traffic and evade detection |
+| **Ingress Tool Transfer** | T1105 | Malicious zip file staged for download via redirect URL |
