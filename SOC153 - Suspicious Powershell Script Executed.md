@@ -89,17 +89,3 @@ Status    : NOT Contained
 > **Note:** 11 files dropped and 10+ additional files 
 > identified — confirming multi-stage payload delivery.
 ```
-
----
-
-## 🎯 Now Let's Move To 3.2 — Log Analysis!
-
-You have 3 connections to document. From memory, tell me the details of:
-
-**Connection 1** — Chrome download
-```
-Time → ?
-Destination IP → ?
-Port → ?
-Process → ?
-What happened → ?
