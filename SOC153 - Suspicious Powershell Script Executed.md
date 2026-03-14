@@ -67,3 +67,14 @@ Here are the results of the hash reputatuion from virus total:
 <img src="Images/hash6.png">
 
 33 out of 62 AV engines is malicious and the final verdict is confirmed malicious.
+In the image 5 we found one interesting stuff.
+```bash
+Contacted URL:
+https://kionagranada.com/upload/beauty.exe
+                                  ↑
+                            beauty.exe !!
+```
+
+This malicious powershell script is trying to download another file called beauty.exe from internet onto Tony's computer.
+payload_1.ps1 is the door opener and beauty.exe is the real weapon comming through the door. So our next objective is to find out the connections going out from Tony's computer around 5:23 PM on March 14.
+
