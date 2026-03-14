@@ -196,4 +196,3 @@ Caught before infection! 🛡️
 >   masquerading as a legitimate voucher file
 > - This is the same AWS S3 abuse technique 
 >   we saw in SOC153!
-```
