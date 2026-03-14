@@ -26,8 +26,8 @@ coffeeshooop.com were detected. The phishing
 email was caught by the SOC before any damage 
 occurred.
 
-Verdict   : True Positive
-Attack    : Phishing — Social Engineering
-Severity  : Medium
-Status    : Contained — No click detected
+Verdict   : True Positive  
+Attack    : Phishing — Social Engineering  
+Severity  : Medium  
+Status    : Contained — No click detected  
 
