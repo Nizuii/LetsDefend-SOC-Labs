@@ -168,3 +168,32 @@ Caught before infection! 🛡️
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
+## 5. Indicators of Compromise (IOCs)
+
+### Malicious Email Details
+| Field | Value | Notes |
+|---|---|---|
+| **Sender Address** | free@coffeeshooop.com | Typosquatted domain |
+| **Sender Domain** | coffeeshooop.com | 3 o's — impersonating legitimate domain |
+| **Subject Line** | Free Coffee Voucher | Social engineering lure |
+
+### Malicious IP Addresses
+| IP | Country | ISP | Detections | Role |
+|---|---|---|---|---|
+| **103.80.134.63** | 🇰🇷 South Korea | LG DACOM / HDTIDC | 8/94 VT | Phishing email delivery server |
+
+### Malicious URLs & Domains
+| Type | Value | Notes |
+|---|---|---|
+| **Domain** | coffeeshooop.com | Typosquatted attacker domain |
+| **Malicious URL** | https://download.cyberlearn.academy/download/download?url=https://files-ld.s3.us-east-2.amazonaws.com/59cbd215-76ea-434d-93ca-4d6aec3bac98-free-coffee.zip | Malware delivery URL hidden behind "Redeem Now" button |
+
+> **Analyst Notes:**
+> - The malicious URL uses a redirect technique — 
+>   it first goes through cyberlearn.academy 
+>   then pulls a zip file from AWS S3
+> - The zip file is named "free-coffee.zip" — 
+>   masquerading as a legitimate voucher file
+> - This is the same AWS S3 abuse technique 
+>   we saw in SOC153!
+```
