@@ -234,3 +234,29 @@ The alert is classified as True Positive based on:
 - No outbound connections to 
   coffeeshooop.com detected in logs ✅
 - Threat contained before any damage ✅
+
+## 8. Response Actions
+
+### 🔴 Immediate (Within Minutes)
+| Priority | Action |
+|---|---|
+| 1 | **Delete phishing email** from Felix@letsdefend.io inbox immediately — before Felix sees and clicks it |
+| 2 | **Warn Felix directly** — notify him about the phishing attempt via phone or in person |
+| 3 | **Block sender** free@coffeeshooop.com on email gateway |
+
+### 🟡 Urgent (Within Hours)
+| Priority | Action |
+|---|---|
+| 1 | **Block domain** coffeeshooop.com on DNS, email gateway and web proxy |
+| 2 | **Block SMTP IP** 103.80.134.63 on firewall |
+| 3 | **Block malicious URL** https://download.cyberlearn.academy/download/download?url=https://files-ld.s3.us-east-2.amazonaws.com/59cbd215-76ea-434d-93ca-4d6aec3bac98-free-coffee.zip |
+| 4 | **Check if same email was sent** to other employees — search logs for 103.80.134.63 contacting other internal mailboxes |
+
+### 🟠 Important (Within 24 Hours)
+| Priority | Action |
+|---|---|
+| 1 | **Set detection rules** in email security tools to flag typosquatted domains automatically |
+| 2 | **Deploy DMARC, SPF and DKIM** email authentication to prevent spoofed sender addresses |
+| 3 | **Security awareness training** for all staff — teach employees to identify phishing emails, urgency tactics and typosquatting |
+| 4 | **Review email filtering rules** — strengthen filters to catch similar phishing attempts before reaching inbox |
+| 5 | **Report domain** coffeeshooop.com to domain registrar for takedown |
