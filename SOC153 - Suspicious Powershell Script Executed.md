@@ -267,3 +267,32 @@ The alert is classified as a True Positive based on:
 - AV detected but failed to block the threat
 - Machine remained actively compromised 
   30+ hours after alert
+
+## 8. Response Actions
+
+### 🔴 Immediate (Within Minutes)
+| Priority | Action |
+|---|---|
+| 1 | **Isolate Tony's machine** from the network immediately — disconnect from internet and internal network to stop C2 communication |
+| 2 | **Block all C2 IPs** on firewall — 91.236.116.163, 3.5.130.147, 161.22.46.148 |
+| 3 | **Block domain** kionagranada.com on DNS and proxy |
+| 4 | **Notify Tony** — instruct him to stop using the machine immediately |
+
+### 🟡 Urgent (Within Hours)
+| Priority | Action |
+|---|---|
+| 1 | **Check if beauty.exe or sd2.ps1 were successfully downloaded** and executed on Tony's machine |
+| 2 | **Investigate network traffic** around alert time — look for any data exfiltration attempts via C2 connections |
+| 3 | **Find the phishing email** Tony received — check Email Security logs for malicious links |
+| 4 | **Reset Tony's credentials** — attacker may have stolen passwords via the malware |
+| 5 | **Take memory dump** of Tony's machine before isolating — preserve forensic evidence |
+
+### 🟠 Important (Within 24 Hours)
+| Priority | Action |
+|---|---|
+| 1 | **Scan all other machines** on the network for the same file hash — db8be06ba6d2d... |
+| 2 | **Check all endpoints** for connections to the 3 C2 IPs — more machines may be infected |
+| 3 | **Reimage Tony's machine** after forensic analysis is complete |
+| 4 | **Deploy PowerShell script block logging** across all endpoints to detect similar attacks |
+| 5 | **Improve email filtering** to block phishing links and malicious attachments |
+| 6 | **Enforce PowerShell ExecutionPolicy** — set to AllSigned across all machines |
